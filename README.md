@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# SOLID Applied to Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+"SOLID Applied to Frontend" is a project that explores the application of the SOLID principles in frontend development. The SOLID principles are a set of design principles that help developers create maintainable, scalable, and robust software. This project demonstrates how these principles can be applied effectively in the context of modern frontend frameworks like React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## SOLID Principles
 
-## Expanding the ESLint configuration
+The SOLID acronym stands for:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **S** - Single Responsibility Principle (SRP)
+2. **O** - Open/Closed Principle (OCP)
+3. **L** - Liskov Substitution Principle (LSP)
+4. **I** - Interface Segregation Principle (ISP)
+5. **D** - Dependency Inversion Principle (DIP)
 
-- Configure the top-level `parserOptions` property like this:
+Each principle is implemented in various components of the project, showcasing best practices and design patterns that lead to cleaner and more manageable code.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Demonstrates the application of each SOLID principle in frontend development.
+- Interactive examples and code snippets for better understanding.
+- User-friendly interface built with React and Tailwind CSS.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Live Application
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+You can access the live application at the following link:
+
+[Live Application](https://giovaniavila.github.io/solid-applied-to-react/)
+
+## Getting Started
+
+To run the project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/giovaniavila/solid-applied-to-react.git
