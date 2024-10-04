@@ -1,6 +1,7 @@
 import React from "react";
 import SingleResponsability from "./single-responsability/single-responsability";
 import OpenClosed from "./open-closed/open-closed";
+import Liskov from "./liskov/liskov-substitution";
 
 const HomePage: React.FC = () => {
   return (
@@ -14,7 +15,8 @@ const HomePage: React.FC = () => {
         </header>
         <article className="text-xl flex flex-col gap-14">
           <SingleResponsability />
-          <OpenClosed/>
+          <OpenClosed />
+          <Liskov />
         </article>
       </section>
     </main>

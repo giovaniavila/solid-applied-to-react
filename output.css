@@ -629,6 +629,14 @@ pre {
   height: 0.5rem;
 }
 
+.max-h-128 {
+  max-height: 32rem;
+}
+
+.max-h-64 {
+  max-height: 16rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
