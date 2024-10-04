@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/lib/utils.ts","./src/priciples/index.tsx","./src/priciples/open-closed/example.tsx","./src/priciples/open-closed/open-closed.tsx","./src/priciples/single-responsability/example.tsx","./src/priciples/single-responsability/single-responsability.tsx"],"version":"5.6.2"}
