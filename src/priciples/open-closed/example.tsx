@@ -1,29 +1,45 @@
-export const codeSnippet = `import React, { useState } from 'react';
+export const codeSnippet = `import React from 'react';
 
-const handleClick = (setMessage: React.Dispatch<React.SetStateAction<string>>) => {
-    setMessage("You clicked!");
+// base button component
+const Button = ({ label, onClick, style }: { label: string, onClick: () => void, style?: React.CSSProperties }) => {
+  return (
+    <button onClick={onClick} style={style}>
+      {label}
+    </button>
+  );
 };
 
-// Function to render the content
-const renderContent = (message: string) => {
-    return (
-        <div>
-            <h1>{message}</h1>
-        </div>
-    );
+export default Button;
+
+import React from 'react';
+import Button from './Button';
+
+// extended button to create PrimaryButton
+const PrimaryButton = ({ label, onClick }: { label: string, onClick: () => void }) => {
+  const primaryStyle = {
+    backgroundColor: 'blue',
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    borderRadius: '4px',
+  };
+
+  return <Button label={label} onClick={onClick} style={primaryStyle} />;
 };
 
-// Main Component
-const MyComponent: React.FC = () => {
-    const [message, setMessage] = useState<string>("");
+// extended button to create DangerButton
+const DangerButton = ({ label, onClick }: { label: string, onClick: () => void }) => {
+  const dangerStyle = {
+    backgroundColor: 'red',
+    color: 'white',
+    padding: '10px 20px',
+    border: 'none',
+    borderRadius: '4px',
+  };
 
-    return (
-        <div>
-            <button onClick={() => handleClick(setMessage)}>Click here</button>
-            {renderContent(message)}
-        </div>
-    );
+  return <Button label={label} onClick={onClick} style={dangerStyle} />;
 };
 
-export default MyComponent;
+export { PrimaryButton, DangerButton };
+
 `;
