@@ -2,6 +2,7 @@ import React from "react";
 import SingleResponsability from "./single-responsability/single-responsability";
 import OpenClosed from "./open-closed/open-closed";
 import Liskov from "./liskov/liskov-substitution";
+import InterfaceSegregration from "./interface-segregration/interface-segregration";
 
 const HomePage: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage: React.FC = () => {
           <SingleResponsability />
           <OpenClosed />
           <Liskov />
+          <InterfaceSegregration />
         </article>
       </section>
     </main>
