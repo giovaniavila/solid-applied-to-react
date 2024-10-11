@@ -1,33 +1,39 @@
-export const codeSnippet = `import React, { useState } from 'react';
+export const codeSnippet = `
+import React, { useState } from 'react';
 
-// Base Button component - closed for modification, open for extension
-const Button: React.FC<{ onClick: () => void; label: string }> = ({
-    onClick,
-    label,
-}) => {
-    return <button onClick={onClick}>{label}</button>;
+// function that handle the form submit out of the main component
+const handleSubmit = (email: string, password: string) => {
+  console.log('Email:', email, 'Password:', password);
+  alert(Email: $ {email}, Password: $ {password});
 };
 
-// Extension: Specific button with custom behavior
-const ClickableButton: React.FC<{ setMessage: React.Dispatch<React.SetStateAction<string>> }> = ({ setMessage }) => {
-    const handleClick = () => {
-        setMessage("Button clicked!");
-    };
+// main component just rendering the content
+const LoginForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    return <Button onClick={handleClick} label="Click here" />;
+  return (
+    <div>
+      <div>
+        <label>Email:</label>
+        <input 
+          type="email" 
+          value={email} 
+          onChange={(e) => setEmail(e.target.value)} 
+        />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input 
+          type="password" 
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)} 
+        />
+      </div>
+      <button onClick={() => handleSubmit(email, password)}>Login</button>
+    </div>
+  );
 };
 
-// Main Component - uses the extended Button without modifying the base Button component
-const MyComponent: React.FC = () => {
-    const [message, setMessage] = useState<string>("");
-
-    return (
-        <div>
-            <ClickableButton setMessage={setMessage} />
-            {message && <h1>{message}</h1>}
-        </div>
-    );
-};
-
-export default MyComponent;
+export default LoginForm;
 `;
